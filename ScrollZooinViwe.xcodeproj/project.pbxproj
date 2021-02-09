@@ -13,6 +13,7 @@
 		929F412625CE200F00008752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929F412425CE200F00008752 /* Main.storyboard */; };
 		929F412825CE201100008752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F412725CE201100008752 /* Assets.xcassets */; };
 		929F412B25CE201100008752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929F412925CE201100008752 /* LaunchScreen.storyboard */; };
+		929F414325CEC37700008752 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F414225CEC37700008752 /* ImageScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		929F412725CE201100008752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929F412A25CE201100008752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		929F412C25CE201100008752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		929F414225CEC37700008752 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				929F412725CE201100008752 /* Assets.xcassets */,
 				929F412925CE201100008752 /* LaunchScreen.storyboard */,
 				929F412C25CE201100008752 /* Info.plist */,
+				929F414225CEC37700008752 /* ImageScrollView.swift */,
 			);
 			path = ScrollZooinViwe;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				929F412325CE200F00008752 /* ViewController.swift in Sources */,
 				929F411F25CE200F00008752 /* AppDelegate.swift in Sources */,
+				929F414325CEC37700008752 /* ImageScrollView.swift in Sources */,
 				929F412125CE200F00008752 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
