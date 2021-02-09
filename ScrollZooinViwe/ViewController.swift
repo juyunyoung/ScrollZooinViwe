@@ -11,14 +11,7 @@ class ViewController: UIViewController,UIScrollViewDelegate{
     var image=["bg1.png","bg2.png","bg3.png","bg4.png"]
     var frame = CGRect.zero
 
-    let pageControl: UIPageControl = {
-        let pageControl = UIPageControl()
-        pageControl.currentPage = 0
-        pageControl.currentPageIndicatorTintColor = UIColor.red
-       // pageControl.isUserInteractionEnabled = false
 
-        return pageControl
-    }()
     
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView(frame: self.view.frame)
@@ -42,18 +35,16 @@ class ViewController: UIViewController,UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(scrollView)
-        pageControl.numberOfPages = image.count
         setupScreens()
-        self.view.addSubview(self.pageControl)
-
+    
     }
+    
     func setupScreens() {
         for index in 0..<image.count {
             frame.origin.x = scrollView.frame.size.width * CGFloat(index)
             frame.size = scrollView.frame.size
             let imageScrollView = ImageScrollView(frame: frame)
             imageScrollView.set(image: UIImage(named: image[index])!)
-            //imageScrollView.delegate = self
             self.scrollView.addSubview(imageScrollView)
         }
 
@@ -63,7 +54,7 @@ class ViewController: UIViewController,UIScrollViewDelegate{
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
-        pageControl.currentPage = Int(pageNumber)
+ 
      
     }
 }
