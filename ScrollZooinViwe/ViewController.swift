@@ -45,6 +45,8 @@ class ViewController: UIViewController,UIScrollViewDelegate{
             frame.size = scrollView.frame.size
             let imageScrollView = ImageScrollView(frame: frame)
             imageScrollView.set(image: UIImage(named: image[index])!)
+            imageScrollView.tag = index+1
+            print("index==\(index)")
             self.scrollView.addSubview(imageScrollView)
         }
 
@@ -54,8 +56,9 @@ class ViewController: UIViewController,UIScrollViewDelegate{
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
- 
-     
+        let srollview:ImageScrollView = self.view.viewWithTag(Int(pageNumber+1)) as! ImageScrollView
+        srollview.zoomScale = srollview.minimumZoomScale
+
     }
 }
 
