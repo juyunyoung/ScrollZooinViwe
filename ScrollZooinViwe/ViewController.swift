@@ -46,7 +46,6 @@ class ViewController: UIViewController,UIScrollViewDelegate{
             let imageScrollView = ImageScrollView(frame: frame)
             imageScrollView.set(image: UIImage(named: image[index])!)
             imageScrollView.tag = index+1
-            print("index==\(index)")
             self.scrollView.addSubview(imageScrollView)
         }
 
